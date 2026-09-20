@@ -1,0 +1,95 @@
+2026-09-20 18:33:11,384 - INFO - Dataset: meld
+2026-09-20 18:33:11,384 - INFO - Device: cuda
+2026-09-20 18:33:11,385 - INFO - Loading data...
+2026-09-20 18:33:12,060 - INFO - Building model...
+2026-09-20 18:33:12,896 - INFO - Total parameters: 82,184,636
+2026-09-20 18:33:12,896 - INFO - Trainable parameters: 82,184,636
+2026-09-20 18:33:15,095 - INFO - category weights: tensor([0.5859, 2.3436], device='cuda:0')
+2026-09-20 18:33:15,095 - INFO - Starting training...
+2026-09-20 18:33:15,095 - INFO - 
+=== Epoch 1/20 ===
+2026-09-20 18:39:29,678 - INFO - Train - Loss(total/pair_mix/ot/pair_ce/T_BCE/T_KL/emotion/cause): 2.0539/1.3150/0.6743/2.5111/0.7628/0.6478/0.7591/0.7610, Pair P/R/F1: 0.2549/0.3064/0.2783, Emotion P/R/F1: 0.5805/0.6481/0.6124, Cause P/R/F1: 0.5016/0.4649/0.4826
+2026-09-20 18:39:40,245 - INFO - Eval - Loss(total/pair/emotion/cause): 3.0391/2.7812/0.6358/0.6476, Pair P/R/F1: 0.6640/0.2084/0.3172, Emotion P/R/F1: 0.6866/0.7695/0.7257, Cause P/R/F1: 0.6133/0.6996/0.6536
+2026-09-20 18:39:40,246 - INFO - Scheduler on plateau step with eval_f1=0.3172, current LR=0.000040
+2026-09-20 18:39:40,247 - INFO - Current best F1: 0.3172
+2026-09-20 18:39:43,539 - INFO - 
+=== Epoch 2/20 ===
+2026-09-20 18:45:48,483 - INFO - Train - Loss(total/pair_mix/ot/pair_ce/T_BCE/T_KL/emotion/cause): 1.5348/0.8560/0.5076/1.4260/0.7591/0.4407/0.7187/0.7171, Pair P/R/F1: 0.3552/0.3553/0.3552, Emotion P/R/F1: 0.6054/0.6415/0.6229, Cause P/R/F1: 0.5487/0.5226/0.5353
+2026-09-20 18:45:58,643 - INFO - Eval - Loss(total/pair/emotion/cause): 1.6791/1.4401/0.5781/0.6040, Pair P/R/F1: 0.5312/0.4981/0.5141, Emotion P/R/F1: 0.7289/0.8290/0.7757, Cause P/R/F1: 0.6619/0.6179/0.6391
+2026-09-20 18:45:58,644 - INFO - Scheduler on plateau step with eval_f1=0.5141, current LR=0.000040
+2026-09-20 18:45:58,644 - INFO - Current best F1: 0.5141
+2026-09-20 18:46:05,702 - INFO - 
+=== Epoch 3/20 ===
+2026-09-20 18:52:09,889 - INFO - Train - Loss(total/pair_mix/ot/pair_ce/T_BCE/T_KL/emotion/cause): 1.4219/0.7672/0.4482/1.2306/0.7635/0.3833/0.6747/0.6842, Pair P/R/F1: 0.3985/0.3646/0.3808, Emotion P/R/F1: 0.6428/0.6815/0.6616, Cause P/R/F1: 0.5867/0.5880/0.5874
+2026-09-20 18:52:20,036 - INFO - Eval - Loss(total/pair/emotion/cause): 1.5334/1.3013/0.5404/0.5937, Pair P/R/F1: 0.4904/0.5858/0.5339, Emotion P/R/F1: 0.7606/0.7908/0.7754, Cause P/R/F1: 0.6699/0.6597/0.6648
+2026-09-20 18:52:20,045 - INFO - Scheduler on plateau step with eval_f1=0.5339, current LR=0.000040
+2026-09-20 18:52:20,046 - INFO - Current best F1: 0.5339
+2026-09-20 18:52:28,190 - INFO - 
+=== Epoch 4/20 ===
+2026-09-20 18:58:31,088 - INFO - Train - Loss(total/pair_mix/ot/pair_ce/T_BCE/T_KL/emotion/cause): 1.3751/0.7343/0.4349/1.1520/0.7624/0.3639/0.6387/0.6639, Pair P/R/F1: 0.4078/0.3608/0.3828, Emotion P/R/F1: 0.6721/0.7060/0.6886, Cause P/R/F1: 0.6193/0.5893/0.6039
+2026-09-20 18:58:41,244 - INFO - Eval - Loss(total/pair/emotion/cause): 1.4113/1.1798/0.5175/0.5992, Pair P/R/F1: 0.4615/0.6468/0.5386, Emotion P/R/F1: 0.7693/0.8046/0.7866, Cause P/R/F1: 0.6655/0.7072/0.6857
+2026-09-20 18:58:41,244 - INFO - Scheduler on plateau step with eval_f1=0.5386, current LR=0.000040
+2026-09-20 18:58:41,245 - INFO - Current best F1: 0.5386
+2026-09-20 18:58:48,870 - INFO - 
+=== Epoch 5/20 ===
+2026-09-20 19:04:51,197 - INFO - Train - Loss(total/pair_mix/ot/pair_ce/T_BCE/T_KL/emotion/cause): 1.3451/0.7079/0.4363/1.0879/0.7622/0.3649/0.6150/0.6594, Pair P/R/F1: 0.4139/0.3730/0.3924, Emotion P/R/F1: 0.6874/0.7454/0.7153, Cause P/R/F1: 0.6280/0.5985/0.6129
+2026-09-20 19:05:01,392 - INFO - Eval - Loss(total/pair/emotion/cause): 1.3308/1.0997/0.5088/0.6007, Pair P/R/F1: 0.4271/0.7484/0.5439, Emotion P/R/F1: 0.7925/0.7756/0.7840, Cause P/R/F1: 0.6711/0.6787/0.6749
+2026-09-20 19:05:01,392 - INFO - Scheduler on plateau step with eval_f1=0.5439, current LR=0.000040
+2026-09-20 19:05:01,393 - INFO - Current best F1: 0.5439
+2026-09-20 19:05:11,304 - INFO - 
+=== Epoch 6/20 ===
+2026-09-20 19:11:21,278 - INFO - Train - Loss(total/pair_mix/ot/pair_ce/T_BCE/T_KL/emotion/cause): 1.3365/0.6976/0.4466/1.0552/0.7645/0.3701/0.6041/0.6623, Pair P/R/F1: 0.4175/0.3821/0.3990, Emotion P/R/F1: 0.7068/0.7206/0.7136, Cause P/R/F1: 0.6172/0.6323/0.6247
+2026-09-20 19:11:31,454 - INFO - Eval - Loss(total/pair/emotion/cause): 1.3456/1.1157/0.5048/0.5980, Pair P/R/F1: 0.4524/0.6760/0.5420, Emotion P/R/F1: 0.8022/0.7740/0.7879, Cause P/R/F1: 0.6798/0.6578/0.6686
+2026-09-20 19:11:31,455 - INFO - Scheduler on plateau step with eval_f1=0.5420, current LR=0.000040
+2026-09-20 19:11:33,302 - INFO - 
+=== Epoch 7/20 ===
+2026-09-20 19:17:35,682 - INFO - Train - Loss(total/pair_mix/ot/pair_ce/T_BCE/T_KL/emotion/cause): 1.3156/0.6848/0.4439/1.0238/0.7617/0.3641/0.5882/0.6484, Pair P/R/F1: 0.4206/0.3826/0.4007, Emotion P/R/F1: 0.7159/0.7394/0.7275, Cause P/R/F1: 0.6338/0.6160/0.6248
+2026-09-20 19:17:45,884 - INFO - Eval - Loss(total/pair/emotion/cause): 1.3145/1.0857/0.5033/0.5948, Pair P/R/F1: 0.4695/0.6557/0.5472, Emotion P/R/F1: 0.8125/0.7740/0.7928, Cause P/R/F1: 0.6667/0.7110/0.6881
+2026-09-20 19:17:45,893 - INFO - Scheduler on plateau step with eval_f1=0.5472, current LR=0.000040
+2026-09-20 19:17:45,893 - INFO - Current best F1: 0.5472
+2026-09-20 19:17:53,975 - INFO - 
+=== Epoch 8/20 ===
+2026-09-20 19:23:57,046 - INFO - Train - Loss(total/pair_mix/ot/pair_ce/T_BCE/T_KL/emotion/cause): 1.3195/0.6898/0.4312/1.0423/0.7645/0.3572/0.5865/0.6462, Pair P/R/F1: 0.4272/0.3765/0.4003, Emotion P/R/F1: 0.7173/0.7358/0.7264, Cause P/R/F1: 0.6391/0.6108/0.6246
+2026-09-20 19:24:07,273 - INFO - Eval - Loss(total/pair/emotion/cause): 1.3005/1.0722/0.5039/0.5930, Pair P/R/F1: 0.4302/0.7052/0.5344, Emotion P/R/F1: 0.8179/0.7679/0.7921, Cause P/R/F1: 0.6716/0.6958/0.6835
+2026-09-20 19:24:07,274 - INFO - Scheduler on plateau step with eval_f1=0.5344, current LR=0.000040
+2026-09-20 19:24:09,126 - INFO - 
+=== Epoch 9/20 ===
+2026-09-20 19:30:11,069 - INFO - Train - Loss(total/pair_mix/ot/pair_ce/T_BCE/T_KL/emotion/cause): 1.2882/0.6625/0.4376/0.9712/0.7612/0.3592/0.5821/0.6374, Pair P/R/F1: 0.4294/0.3829/0.4048, Emotion P/R/F1: 0.7188/0.7505/0.7343, Cause P/R/F1: 0.6288/0.6592/0.6436
+2026-09-20 19:30:21,250 - INFO - Eval - Loss(total/pair/emotion/cause): 1.2960/1.0683/0.5028/0.5915, Pair P/R/F1: 0.4599/0.6709/0.5457, Emotion P/R/F1: 0.8138/0.7740/0.7934, Cause P/R/F1: 0.6775/0.6749/0.6762
+2026-09-20 19:30:21,250 - INFO - Scheduler on plateau step with eval_f1=0.5457, current LR=0.000040
+2026-09-20 19:30:23,096 - INFO - 
+=== Epoch 10/20 ===
+2026-09-20 19:36:25,049 - INFO - Train - Loss(total/pair_mix/ot/pair_ce/T_BCE/T_KL/emotion/cause): 1.2775/0.6569/0.4176/0.9665/0.7628/0.3414/0.5682/0.6347, Pair P/R/F1: 0.4514/0.3768/0.4108, Emotion P/R/F1: 0.7383/0.7347/0.7365, Cause P/R/F1: 0.6432/0.6142/0.6284
+2026-09-20 19:36:35,161 - INFO - Eval - Loss(total/pair/emotion/cause): 1.2164/0.9896/0.5037/0.5878, Pair P/R/F1: 0.4222/0.7065/0.5285, Emotion P/R/F1: 0.8179/0.7679/0.7921, Cause P/R/F1: 0.6713/0.7300/0.6995
+2026-09-20 19:36:35,161 - INFO - Scheduler on plateau step with eval_f1=0.5285, current LR=0.000020
+2026-09-20 19:36:36,960 - INFO - 
+=== Epoch 11/20 ===
+2026-09-20 19:42:39,915 - INFO - Train - Loss(total/pair_mix/ot/pair_ce/T_BCE/T_KL/emotion/cause): 1.2820/0.6602/0.4218/0.9659/0.7647/0.3414/0.5686/0.6358, Pair P/R/F1: 0.4346/0.3606/0.3942, Emotion P/R/F1: 0.7395/0.7420/0.7407, Cause P/R/F1: 0.6273/0.6418/0.6345
+2026-09-20 19:42:50,042 - INFO - Eval - Loss(total/pair/emotion/cause): 1.2311/1.0049/0.5044/0.5858, Pair P/R/F1: 0.4498/0.6722/0.5390, Emotion P/R/F1: 0.8224/0.7634/0.7918, Cause P/R/F1: 0.6808/0.6730/0.6769
+2026-09-20 19:42:50,050 - INFO - Scheduler on plateau step with eval_f1=0.5390, current LR=0.000020
+2026-09-20 19:42:51,865 - INFO - 
+=== Epoch 12/20 ===
+2026-09-20 19:48:53,694 - INFO - Train - Loss(total/pair_mix/ot/pair_ce/T_BCE/T_KL/emotion/cause): 1.2539/0.6373/0.4084/0.9185/0.7640/0.3297/0.5758/0.6249, Pair P/R/F1: 0.4530/0.3676/0.4059, Emotion P/R/F1: 0.7313/0.7370/0.7342, Cause P/R/F1: 0.6476/0.6267/0.6370
+2026-09-20 19:49:03,878 - INFO - Eval - Loss(total/pair/emotion/cause): 1.1852/0.9596/0.5032/0.5841, Pair P/R/F1: 0.4253/0.7344/0.5387, Emotion P/R/F1: 0.8227/0.7649/0.7927, Cause P/R/F1: 0.6786/0.6863/0.6824
+2026-09-20 19:49:03,879 - INFO - Scheduler on plateau step with eval_f1=0.5387, current LR=0.000020
+2026-09-20 19:49:05,775 - INFO - 
+=== Epoch 13/20 ===
+2026-09-20 19:55:07,496 - INFO - Train - Loss(total/pair_mix/ot/pair_ce/T_BCE/T_KL/emotion/cause): 1.2505/0.6348/0.4150/0.9066/0.7625/0.3340/0.5668/0.6241, Pair P/R/F1: 0.4521/0.3646/0.4037, Emotion P/R/F1: 0.7401/0.7379/0.7390, Cause P/R/F1: 0.6477/0.6379/0.6427
+2026-09-20 19:55:17,676 - INFO - Eval - Loss(total/pair/emotion/cause): 1.1894/0.9637/0.5044/0.5842, Pair P/R/F1: 0.4347/0.7103/0.5393, Emotion P/R/F1: 0.8234/0.7618/0.7914, Cause P/R/F1: 0.6785/0.7262/0.7016
+2026-09-20 19:55:17,676 - INFO - Scheduler on plateau step with eval_f1=0.5393, current LR=0.000020
+2026-09-20 19:55:19,537 - INFO - 
+=== Epoch 14/20 ===
+2026-09-20 20:01:34,217 - INFO - Train - Loss(total/pair_mix/ot/pair_ce/T_BCE/T_KL/emotion/cause): 1.2484/0.6338/0.4024/0.9113/0.7630/0.3244/0.5656/0.6265, Pair P/R/F1: 0.4514/0.3591/0.4000, Emotion P/R/F1: 0.7461/0.7294/0.7376, Cause P/R/F1: 0.6482/0.6355/0.6418
+2026-09-20 20:01:44,420 - INFO - Eval - Loss(total/pair/emotion/cause): 1.1793/0.9538/0.5027/0.5840, Pair P/R/F1: 0.4321/0.7039/0.5355, Emotion P/R/F1: 0.8210/0.7634/0.7911, Cause P/R/F1: 0.6884/0.6635/0.6757
+2026-09-20 20:01:44,420 - INFO - Scheduler on plateau step with eval_f1=0.5355, current LR=0.000010
+2026-09-20 20:01:46,294 - INFO - 
+=== Epoch 15/20 ===
+2026-09-20 20:07:55,804 - INFO - Train - Loss(total/pair_mix/ot/pair_ce/T_BCE/T_KL/emotion/cause): 1.2317/0.6201/0.3913/0.8818/0.7613/0.3137/0.5633/0.6268, Pair P/R/F1: 0.4670/0.3594/0.4062, Emotion P/R/F1: 0.7438/0.7507/0.7473, Cause P/R/F1: 0.6519/0.6190/0.6350
+2026-09-20 20:08:06,080 - INFO - Eval - Loss(total/pair/emotion/cause): 1.1476/0.9224/0.5023/0.5832, Pair P/R/F1: 0.4381/0.7065/0.5409, Emotion P/R/F1: 0.8210/0.7634/0.7911, Cause P/R/F1: 0.6849/0.6901/0.6875
+2026-09-20 20:08:06,081 - INFO - Scheduler on plateau step with eval_f1=0.5409, current LR=0.000010
+2026-09-20 20:08:07,962 - INFO - Early stopping triggered
+2026-09-20 20:08:07,963 - INFO - 
+=== Training Complete ===
+2026-09-20 20:08:08,465 - INFO - 
+--- Test Evaluation ---
+2026-09-20 20:08:30,707 - INFO - Eval - Loss(total/pair/emotion/cause): 1.1815/0.9852/0.6532/0.4366, Pair P/R/F1: 0.4487/0.6692/0.5372, Emotion P/R/F1: 0.7630/0.7587/0.7608, Cause P/R/F1: 0.6608/0.6894/0.6748

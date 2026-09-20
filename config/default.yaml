@@ -1,0 +1,128 @@
+# =============================================================================
+# SCALE 训练超参数配置
+# -----------------------------------------------------------------------------
+# 本文件作为 argparse 的「默认值」来源：任何命令行参数（如 --batch_size 128）
+# 都会覆盖这里对应的项。
+#
+# 用法:
+#   python train.py                              # 使用本文件默认值
+#   python train.py --config config/default.yaml # 显式指定
+#   python train.py --batch_size 128             # CLI 覆盖 YAML 中的 batch_size
+#
+# 显存说明: batch_size 由 128 上调到 256（针对 24GB RTX 4090）。
+# 学习率按线性缩放规则同步放大 2 倍: 4e-5 -> 8e-5。
+# =============================================================================
+
+# ---- 数据与路径 ----
+dataset: meld              # iemocap(=RECCON-IE) | meld(=ECF) | dailydialog(=RECCON-DD)
+data_dir: ./data
+feature_dir: ./features
+save_dir: ./checkpoints
+log_dir: ./logs
+
+# ---- 设备与训练控制 ----
+device: cuda
+seed: 42
+log_interval: 10
+eval_interval: 1
+save_interval: 1
+patience: 8
+load_checkpoint: ""
+
+# ---- 训练超参数 ----
+batch_size: 256            # 由 128 上调到 256
+learning_rate: 8e-5        # 4e-5 * 2（线性缩放，batch 翻倍）
+weight_decay: 5e-4
+epochs: 20
+dropout: 0.4
+
+# ---- 模型架构 ----
+hidden_dim: 1024
+n_heads: 8
+max_doc_len: 50
+position_embedding_dim: 50
+
+# ---- 节点级嵌入 ----
+use_pos_embed: true
+use_speaker_embed: true
+speaker_vocab_size: 16
+
+# ---- 图结构 ----
+graph_num_layers: 2
+graph_window_size: 5
+use_speaker_edges: true
+use_temporal_edges: true
+distance_decay: true
+graph_tau: 2.0
+
+# ---- 学习率调度 (ReduceLROnPlateau) ----
+plateau_factor: 0.5
+plateau_patience: 2
+plateau_threshold: 1e-3
+plateau_cooldown: 1
+plateau_min_lr: 1e-6
+gradient_clip: 1.0
+
+# ---- 全局解码 (MCMF) ----
+mcmf_row_capacity: 2
+mcmf_col_capacity: 3
+mcmf_lambda: 0.55
+mcmf_score_space: prob
+mcmf_eps: 1e-6
+
+# ---- MCMF 边预过滤 ----
+mcmf_pre_topk_per_row: 3
+mcmf_pre_min_prob: 0.1
+mcmf_pre_min_logit: null
+
+# ---- 任务与标签 ----
+use_emocate: false
+pred_future_cause: false
+train_max_pair_distance: 5
+eval_max_pair_distance: 4
+weight_ratio_cap: 4.0
+
+# ---- 损失权重 ----
+emotion_weight: 0.1
+cause_weight: 0.3
+
+# ---- FGW / OT 头 ----
+use_ot_head: true
+ot_lambda: 0.4
+ot_loss: kl               # bce | mse | kl
+
+# ---- FGW 求解器 ----
+fgw_eps: 0.1
+fgw_iterations: 12
+fgw_sinkhorn_iter: 50
+fgw_sinkhorn_eps: 1e-6
+fgw_row_norm: entmax      # none | row_softmax | entmax | sparsemax | max
+fgw_row_temp: 1.0
+fgw_entmax_alpha: 1.7
+fgw_entmax_bisect_iter: 50
+
+# ---- UOT (非平衡 OT) ----
+fgw_use_uot: true
+fgw_uot_rho: 2.0
+
+# ---- FGW 融合 ----
+mlp_temp: 2.5
+fgw_alpha: 0.4
+fgw_mode: blend           # blend | replace
+fgw_blend_lambda: 0.2
+fgw_blend_space: logit    # prob | logit
+fgw_attr_metric: maha     # cos | maha
+
+# ---- 额外训练损失 ----
+transport_ce_lambda: 0.4
+transport_ce_pos_weight: 2.0
+distill_with_t_lambda: 0.2
+distill_with_t_temp: 2.0
+distill_with_t_dir: sym   # mlp_to_t | t_to_mlp | sym
+
+# ---- R-GAT ----
+rel_num_bases: 3
+rel_use_knn: true
+rel_knn_k: 5
+rel_knn_min_sim: 0.5
+rel_edge_drop: 0.1
